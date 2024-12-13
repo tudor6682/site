@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+<script>
+	var i= 0;
+	var images= [];
+	images[0]='image1.png';
+	images[1]='image2.png';
+	images[2]='image3.png';
+	images[3]='image4.png';
+	
+	function changeImg()
+	{
+	document.slide.src=images[i];
+	if(i<images.length-1)
+	{i++;}
+	else
+	{i=0;}
+	setTimeout(changeImg, 3000);
+	
+	}
+	window.onload =changeImg;
+</script>
+
+  </head>
+<body>
+<p>
+document
+</p>
+<img name="slide" width="400" height="auto">
+</body>
